@@ -12,10 +12,23 @@ public class HelloActivity extends AppCompatActivity {
         setContentView(R.layout.activity_hello);
 
         // Explicit Intent
+/*
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("key1", "value1");
 
         startActivity(intent);
+*/
+
+// Implicit Intent
+
+        Intent sendIntent = new Intent();
+
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
+        sendIntent.setType("text/plain");
+
+
+        startActivity(sendIntent);
 
 
     }
