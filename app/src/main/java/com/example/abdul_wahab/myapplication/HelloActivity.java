@@ -13,6 +13,8 @@ public class HelloActivity extends AppCompatActivity {
 
         // Explicit Intent
         Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("key1", "value1");
+
         startActivity(intent);
 
 
